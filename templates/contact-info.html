@@ -1,0 +1,16 @@
+ <head>
+     <script src="{{ url_for('static', filename = 'scripts/contacts.js') }}" defer></script>
+     <link rel="stylesheet" href="{{ url_for('static', filename = 'style/contact-info.css') }}">
+ </head>
+<div class="contact-info-container">
+     <h1 class="contact-info-header">My Contacts</h1>
+     <h2 class="contact-info-sub-header">
+        People from job applications or general networking
+     </h2>
+    <button class="add-contact-button" onclick="showCreateModal()">Add A New Contact</button>
+     <img
+        class="contact-illustration"
+        src="{{ url_for('static', filename = 'svg/Success.svg') }}"
+        alt="Man celebrating a thumbs-up from someone on his computer"
+     />
+</div>

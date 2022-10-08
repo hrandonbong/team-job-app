@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Tracker | Contacts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/contact-page.css') }}">
+    <script src="{{ url_for('static', filename = 'scripts/contact-widget.mjs') }}" defer></script>
+    <script src="{{ url_for('static', filename = 'scripts/contact-modal.mjs') }}" defer></script>
+</head>
+{% include 'head.html' %}
+<body>
+    {% include 'nav_bar.html' %}
+    <section class="contacts-content-container">
+        {% include 'contact-info.html' %}
+        {% include 'contacts-container.html' %}
+    </section>
+    {% include 'contact-add-modal.html' %}
+    {% include 'contact-edit-modal.html' %}
+    {% include 'contact-delete-modal.html' %}
+</body>
+</html>

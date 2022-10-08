@@ -1,0 +1,15 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/contact-widgets-container.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/contact-widget.css') }}">
+</head>
+<div class="contact-widgets-container">
+    <div class="contact-widgets-labels">
+        <span class="contact-widget-label">Name</span>
+        <span class="contact-widget-label">Company</span>
+        <span class="contact-widget-label">Phone</span>
+        <span class="contact-widget-label">Email</span>
+    </div>
+    {% for contact in data %}
+        {% include 'contact-widget.html' %}
+    {% endfor %}
+</div>

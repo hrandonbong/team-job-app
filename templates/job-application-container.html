@@ -1,0 +1,15 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/job-application-widgets.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/job-application-widgets-container.css') }}">
+</head>
+<div class="job-application-widgets-container">
+    <div class="job-application-widgets-labels">
+        <span class="job-application-widget-label">Job Title</span>
+        <span class="job-application-widget-label">Date Applied</span>
+        <span class="job-application-widget-label">Company</span>
+        <span class="job-application-widget-label">Skills</span>
+    </div>
+    {% for application in data %}
+        {% include 'job-application-widget.html' %}
+    {% endfor %}
+</div>

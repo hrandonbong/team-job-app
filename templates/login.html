@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Tracker | Login</title>
+    <script src="https://kit.fontawesome.com/020658fe35.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/login.css') }}">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+{% include 'head.html' %}
+<body>
+    <section class="content-container">
+        <img
+                class="login-illustration"
+                src="{{ url_for('static', filename = 'svg/Data.svg') }}"
+                alt="Two people collaborating together on a job"
+        />
+        <div class="login-container">
+            <h1 class="login-header">Job Tracker App</h1>
+            <h2 class="login-sub-header">
+                Job application management made easy
+            </h2>
+            <div id="g_id_onload"
+                 data-client_id="482563455816-683337raafm7ojfrnmnrcmiscpqc1dc5.apps.googleusercontent.com"
+                 data-login_uri="https://jobstracker-u34edb44ka-wl.a.run.app/auth"
+                 data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin"
+                 data-type="standard"
+                 data-size="large"
+                 data-theme="outline"
+                 data-text="sign_in_with"
+                 data-shape="rectangular"
+                 data-logo_alignment="center">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

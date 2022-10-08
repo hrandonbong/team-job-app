@@ -1,0 +1,43 @@
+.content-container{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh 0 0 0;
+}
+.login-illustration{
+    height: 70vh;
+    margin: 0 20px;
+}
+.login-container{
+    max-width: 40vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-logo{
+    max-height: 15vh;
+    position: absolute;
+    top: 20px;
+    left: calc(50vw - 7.5vh);
+}
+.login-header{
+    font-size: 4rem;
+    font-weight: bolder;
+    color: #2433BC;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+.login-sub-header{
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #D87B13;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    max-width: 30vw;
+    margin: 0 0 2rem 0;
+}

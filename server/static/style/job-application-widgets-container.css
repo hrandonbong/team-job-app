@@ -1,0 +1,30 @@
+.job-application-widgets-container {
+    max-width: 50vw;
+    min-height: 70vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.job-application-widgets-labels {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    background-color: #2433BC;
+    border-radius: 5px 5px 0 0;
+    padding: 17px 2rem;
+    width: 45vw;
+}
+
+.job-application-widget-label {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    min-width: 7vw;
+    max-width: 9vw;
+    text-align: center;
+    margin: 0 1rem;
+}
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/job-application-delete-modal.css') }}">
+    <title>Job Application Modal</title>
+</head>
+<div id="delete-modal-screen-cover" class="modal-screen-cover" onclick="hideDeleteModal()"></div>
+<div id="delete-modal" class="delete-modal-container">
+    <h3 class="job-application-delete-header">Delete Job Application</h3>
+    <p class="job-application-delete-message">
+        Are you sure you want to delete the job application for <b><span id="delete-job-application-name"></span></b>?
+        This cannot be undone.</p>
+    <div class="delete-modal-buttons">
+        <button id="close-delete-modal" class="delete-modal-button" onclick="hideDeleteModal()">
+            <i class="fa-solid fa-xmark"></i>
+            Cancel
+        </button>
+        <button id="delete-job-application" class="delete-modal-button">
+            <i class="fa-solid fa-trash-can"></i>
+            Delete
+        </button>
+    </div>
+</div>

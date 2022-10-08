@@ -1,0 +1,9 @@
+.contacts-content-container{
+    min-height: 90vh;
+    width: 98vw;
+    display: flex;
+    margin: 10vh 0 5vh 0;
+    padding: 0;
+    justify-content: center;
+    overflow-x: hidden;
+}

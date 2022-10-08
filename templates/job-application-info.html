@@ -1,0 +1,16 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/job-application-info.css') }}">
+</head>
+
+<div class="job-info-container">
+    <h1 class="job-info-header">My Current Jobs</h1>
+    <div>
+        <h2 class="job-info-subheader">
+            People from job applications or general networking
+        </h2>
+    </div>
+    <div>
+        <button class="add-job-button" id="button" onclick="showCreateModal()">Add A Job Application</button>
+    </div>
+    <img class="job-illustration" src="{{ url_for('static', filename = 'img/Support.png') }}" alt="Spaceman checking his emails" />
+</div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/contact-delete-modal.css') }}">
+    <title>Contact Delete Modal</title>
+</head>
+<div id="delete-modal-screen-cover" class="modal-screen-cover" onclick="hideDeleteModal()"></div>
+<div id="delete-modal" class="delete-modal-container">
+    <h3 class="contact-delete-header">Delete Contact</h3>
+    <p class="contact-delete-message">
+        Are you sure you want to delete the contact for <b><span id="delete-contact-name"></span></b>?
+        This cannot be undone.</p>
+    <div class="delete-modal-buttons">
+        <button id="close-delete-modal" class="delete-modal-button" onclick="hideDeleteModal()">
+            <i class="fa-solid fa-xmark"></i>
+            Cancel
+        </button>
+        <button id="delete-contact" class="delete-modal-button">
+            <i class="fa-solid fa-trash-can"></i>
+            Delete
+        </button>
+    </div>
+</div>

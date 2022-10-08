@@ -1,0 +1,26 @@
+<head>
+    <title>Application Widget</title>
+</head>
+<div class="job-application-widget">
+    <div id={{ application.id }} class="job-application-widget-data">
+        <div class="widget-data-container">
+            <span class="data-span">{{ application.title }}</span>
+        </div>
+        <div class="widget-data-container">
+            <span class="data-span">{{ application.date }}</span>
+        </div>
+        <div class="widget-data-container">
+            <span class="data-span">{{ application.company }}</span>
+        </div>
+        <div class="widget-data-container">
+            <span class="data-span">{{ application.skills }}</span>
+        </div>
+
+    </div>
+    <button id="edit-job-open-modal" class="widget-button job-application-edit-button" itemprop= "{{ application.id }}">
+        <i class="fa-solid fa-pen edit-icon"></i>
+    </button>
+    <button id="delete-job-open-modal" class="widget-button delete-button" itemprop= "{{ application.id }}">
+        <i class="fa-solid fa-trash-can"></i>
+    </button>
+</div>

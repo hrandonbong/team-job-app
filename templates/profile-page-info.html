@@ -1,0 +1,20 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/profile-page-info.css') }}">
+</head>
+<div class="profile-info-container">
+    <h1 class="profile-info-header">Welcome Back {{user.name}} !</h1>
+    <div>
+        <a href="/job-applications">
+            <button class="add-job-button">
+                Add A New Job
+            </button>
+        </a>
+    </div>
+    <div>
+        <a href="/contacts">
+            <button class="add-contact-button" id="lower-button">Add A New Contact</button>
+        </a>
+    </div>
+    <img class="profile-illustration" src="{{ url_for('static', filename = 'svg/Subscribe.svg') }}"
+        alt="Spaceman checking his emails" />
+</div>

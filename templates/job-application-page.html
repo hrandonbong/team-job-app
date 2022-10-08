@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Tracker | Applications</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/job-application-page.css') }}">
+    <script src="{{ url_for('static', filename = 'scripts/job-application-modal.mjs') }}" defer></script>
+</head>
+{% include 'head.html' %}
+<body>
+    {% include 'nav_bar.html' %}
+</body>
+    <section class="job-applications-content-container">
+        {% include 'job-application-info.html' %}
+        {% include 'job-application-container.html' %}
+    </section>
+    {% include 'new-job-modal.html' %}
+    {% include 'job-application-delete-modal.html' %}
+    {% include 'job-application-edit-modal.html' %}
+</html>

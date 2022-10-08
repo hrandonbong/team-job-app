@@ -1,0 +1,57 @@
+.job-info-container{
+    max-width: 40vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+    top: 10vh;
+}
+.job-illustration{
+    max-width: 40vw;
+    height: 70%;
+    margin: 0;
+}
+.job-info-header{
+    max-width: 40vw;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: #2433BC;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    left: 50px;
+    margin: 0 0 1rem 0;
+}
+
+.job-info-subheader {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #D87B13;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    max-width: 30vw;
+    margin: 0 0 2rem 0;
+}
+
+.add-job-button, .add-job-button{
+    margin-top: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 9px 36px;
+    font-size: 1.0rem;
+    border: none;
+    background-color: #2433BC;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.add-job-button:hover, .add-job-button:hover{
+    transition: 0.4s;
+    background-color: #5a67b9;
+}
+
+#button {
+    margin-top:-36px;
+    margin-bottom: 36px;
+}

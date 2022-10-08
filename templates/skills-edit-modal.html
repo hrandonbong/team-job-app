@@ -1,0 +1,19 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/skills-edit-modal.css') }}">
+    <title>Skills Edit Modal</title>
+</head>
+<div id="edit-modal-screen-cover" class="modal-screen-cover" onclick="hideEditModal()"></div>
+<div id="edit-modal" class="modal-container">
+    <button class="close-modal" onclick="hideEditModal()">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <h2 class="skill-header">Edit Skill</h2>
+    <form class="skill-form">
+        <label class="input-label">
+            Skill:
+            <input name="name-input" id="Edited Skill" class="edit-input" type="text" required placeholder="Skill:">
+        </label>
+        <input id="submit-edit-skill" class="submit-button" type="button" value="Save and Add">
+    </form>
+</div>

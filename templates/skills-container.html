@@ -1,0 +1,12 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/skills-widgets-container.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/skills-widget.css') }}">
+</head>
+<div class="skills-widgets-container" id= "add-skill">
+    {% for skill in data %}
+        {% include 'skills-widget.html' %}
+    {% endfor %}
+    <button class="new-skill-button" onclick="showCreateModal()">
+        Add a skill
+    </button>
+</div>

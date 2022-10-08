@@ -1,0 +1,31 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/job-application-edit-modal.css') }}">
+    <title>Job Application Edit Modal</title>
+</head>
+<div id="edit-modal-screen-cover" class="modal-screen-cover" onclick="hideEditModal()"></div>
+<div id="edit-modal" class="modal-container">
+    <button class="close-modal" onclick="hideEditModal()">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <h2 class="job-application-header">Edit Job Application</h2>
+    <form class="job-application-form">
+        <label class="input-label">
+            Title:
+            <input id="job-title-edit" name="name-input" class="edit-input" type="text" required placeholder="Title:">
+        </label>
+        <label class="input-label">
+            Date Applied:
+            <input id="date-applied-edit" name="name-input" class="edit-input" type="tel" placeholder="Date Applied:">
+        </label>
+        <label class="input-label">
+            Company:
+            <input id="company-edit" name="name-input" class="edit-input" type="text" required placeholder="Company:">
+        </label>   
+        <h3 class="job-application-subheader">Skills</h3>
+        <label class="input-label">
+            <input id="skills-list-edit" name="name-input" class="edit-input" type="text" required placeholder="Enter a comma-separated list of skills:">
+        </label>
+        <input id="submit-edit-job-application" class="submit-button" type="button" value="Save and Add">
+    </form>
+</div>

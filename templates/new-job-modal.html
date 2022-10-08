@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/new-job-modal.css') }}">
+    <script src="{{ url_for('static', filename = 'scripts/job-page.js') }}" defer></script>
+</head>
+
+<div id="create-modal-screen-cover" class="modal-screen-cover" onclick="hideCreateModal()"></div>
+<div id="create-modal" class="modal-container">
+    <button class="close-modal" onclick="hideCreateModal()">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <h2 class="job-application-header">New Job Application</h2>
+    <form class="job-application-form">
+        <label class="input-label">
+            <input id="job-title" name="name-input" class="edit-input" type="text" required placeholder="Job Title:">
+        </label>
+        <label class="input-label">
+            <input id="date-applied" name="name-input" class="edit-input" type="text" required placeholder="Date Applied:">
+        </label>
+        <label class="input-label">
+            <input id="company" name="name-input" class="edit-input" type="text" required placeholder="Company:">
+        </label>
+        <h3 class="job-application-subheader">Skills</h3>
+        <label class="input-label">
+            <input id="skills-list" name="name-input" class="edit-input" type="text" required placeholder="Enter a comma-separated list of skills:">
+        </label>
+        <input id="submit-create-skill" class="submit-button" type="submit" value="Save and Add" onclick="createJobApplicationSubmit()">
+    </form>
+</div>

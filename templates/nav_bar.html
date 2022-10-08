@@ -1,0 +1,19 @@
+{# Nav bar element will have a coresponding script file to update it's button appearance based on page #}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/nav.css') }}">
+    <script src="{{ url_for('static', filename = 'scripts/nav.js') }}" defer></script>
+</head>
+<nav class="nav-container">
+    <a class="nav-link" id="nav-profile" href="/profile">
+       <i class="fa-solid fa-user"></i>
+        <span class="nav-link-text">Profile</span>
+    </a>
+    <a class="nav-link" id="nav-job-applications" href="/job-applications">
+        <i class="fa-solid fa-briefcase"></i>
+        <span class="nav-link-text">My Jobs</span>
+    </a>
+    <a class="nav-link" id="nav-contacts" href="/contacts">
+        <i class="fa-solid fa-users"></i>
+        <span class="nav-link-text">My Contacts</span>
+    </a>
+</nav>

@@ -1,0 +1,19 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/new-skill-modal.css') }}">
+    <title>New Skill Modal</title>
+</head>
+<div id="create-modal-screen-cover" class="modal-screen-cover" onclick="hideCreateModal()"></div>
+<div id="create-modal" class="modal-container">
+    <button class="close-modal" onclick="hideCreateModal()">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <h2 class="skill-header">Create Skill</h2>
+    <form class="skill-form" onsubmit="createSkillSubmit()">
+        <label class="input-label">
+            Name:
+            <input name="name-input" class="edit-input" type="text" required placeholder="Name:" id="Skill">
+        </label>
+        <input id="submit-create-skill" class="submit-button" type="button" value="Save and Add" onclick="createSkillSubmit()">
+    </form>
+</div>

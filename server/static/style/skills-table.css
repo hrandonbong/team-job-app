@@ -1,0 +1,57 @@
+.skills-table-container {
+    max-width: 60vw;
+    min-height: 50%;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: calc((100vh - 70%) / 2);
+    right: 215px;
+}
+
+.skills-table-header {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    align-items: center;
+    text-align: center;
+    color: #D87B13;
+}
+
+.skills-table-header h1{
+    margin-top: 0;
+}
+
+.skills-table {
+    max-width: 60vw;
+    min-width: 30vw;
+    height: 50%;
+    background: #FFFFFF;
+    border: 1px solid #F0F4F5;
+    box-shadow: 0px 2px 6px 2px rgba(92, 129, 138, 0.12);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.new-skill-button {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 9px 36px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #2433BC;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+.new-skill-button:hover, .add-job-button:hover{
+    transition: 0.4s;
+    background-color: #5a67b9;
+}
+
+#myPopup {
+    display: none;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}

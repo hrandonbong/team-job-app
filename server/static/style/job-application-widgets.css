@@ -1,0 +1,72 @@
+.job-application-widget{
+    display: flex;
+    max-width: 50vw;
+    min-width: 30vw;
+    margin: 1rem 0;
+}
+.job-application-widget-data{
+    border: 1px solid #F0F4F5;
+    box-shadow: 0 2px 6px 2px rgba(92, 129, 138, 0.12);
+    padding: 1rem;
+    display: flex;
+    margin: 0 1rem 0 0;
+    position: relative;
+    max-width: 50vw;
+}
+.widget-data-container{
+    font-family: 'Montserrat', sans-serif;
+    min-width: 7vw;
+    max-width: 9vw;
+    overflow: hidden;
+    padding: 1rem;
+    transition: 0.3s;
+    text-align: center;
+    position: relative;
+}
+.widget-data-container:hover{
+    overflow: visible;
+}
+.widget-data-container span{
+    border: 1px solid transparent;
+}
+.widget-data-container:hover span{
+    cursor: copy;
+    top: 0;
+    left: -15%;
+    height: 100%;
+    min-width: 130%;
+    width: fit-content;
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #F0F4F5;
+    border-radius: 3px;
+    transition: 0.3s;
+    z-index: 100;
+    transform: scale(1.1);
+    border: 1px solid #F0F4F5;
+    box-shadow: 0 1px 3px 2px rgba(92, 129, 138, 0.12);
+    color: #0C1140;
+}
+#widget-data-copied{
+    background-color: #0C1140;
+    color: #EEEEEE;
+    transition: 0.3s;
+}
+.widget-button{
+    border: 0;
+    background-color: transparent;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.widget-button i{
+    color: #0C1140;
+    font-size: 1.2rem;
+}
+.widget-button:hover i{
+    color: #2433BC;
+    transform: scale(1.2);
+    transition: 0.3s;
+}

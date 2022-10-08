@@ -1,0 +1,31 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/contact-modal.css') }}">
+    <title>Contact Create Modal</title>
+</head>
+<div id="create-modal-screen-cover" class="modal-screen-cover" onclick="hideCreateModal()"></div>
+<div id="create-modal" class="modal-container">
+    <button class="close-modal" onclick="hideCreateModal()">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <h2 class="contact-header">Create Contact</h2>
+    <form class="contact-form">
+        <label class="input-label">
+            Name:
+            <input name="name-input" class="edit-input" type="text" required placeholder="Name:">
+        </label>
+        <label class="input-label">
+            Company:
+            <input name="name-input" class="edit-input" type="text" required placeholder="Company:">
+        </label>
+        <label class="input-label">
+            Phone:
+            <input name="name-input" class="edit-input" type="tel" placeholder="Phone:">
+        </label>
+        <label class="input-label">
+            Email:
+            <input name="name-input" class="edit-input" type="email" required placeholder="Email:">
+        </label>
+        <input id="submit-create-contact" class="submit-button" type="submit" value="Save and Add">
+    </form>
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Tracker | Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/skills-table.css') }}">
+    <script src="{{ url_for('static', filename = 'scripts/profile-page.js') }}" defer></script>
+    <script src="{{ url_for('static', filename = 'scripts/skill-widget.mjs') }}" defer></script>
+    <script src="{{ url_for('static', filename = 'scripts/skills-modal.mjs') }}" defer></script>
+</head>
+{% include 'head.html' %}
+<body>
+    {% include 'nav_bar.html' %}
+    {% include 'profile-page-info.html' %}
+    {% include 'new-skill-modal.html' %}
+    {% include 'skills-edit-modal.html' %}
+        <div class="skills-table-container">
+            <div class="skills-table-header">
+                <h1>My Skills</h1>
+            </div>
+            <div class="skills-table">
+                {% include 'skills-container.html' %}
+            </div>
+        </div>
+</body>
+</html>
+
+
+
