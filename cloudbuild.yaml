@@ -1,0 +1,38 @@
+steps:
+  - name: python
+    entrypoint: pip3
+    args: ['install', '-r', 'requirements.txt']
+
+  # [START cloudbuild_python_tests_yaml]
+  # Run unit tests TBA
+  # [END cloudbuild_python_tests_yaml]
+
+  # [START cloudbuild_python_image_yaml]
+  # Docker Build
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t',
+           'us-west2-docker.pkg.dev/$PROJECT_ID/jobs-tracker-docker-repo/jobs-tracker-image:${SHORT_SHA}', '.']
+  # [END cloudbuild_python_image_yaml]
+
+  # [START cloudbuild_python_push_yaml]
+  # Docker push to Google Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push',  'us-west2-docker.pkg.dev/${PROJECT_ID}/jobs-tracker-docker-repo/jobs-tracker-image:${SHORT_SHA}']
+  # [END cloudbuild_python_push_yaml]
+
+  # [START cloudbuild_python_deploy_yaml]
+  # Deploy to Cloud Run
+  - name: google/cloud-sdk
+    args: ['gcloud', 'run', 'deploy', 'jobstracker',
+           '--image=us-west2-docker.pkg.dev/${PROJECT_ID}/jobs-tracker-docker-repo/jobs-tracker-image:${SHORT_SHA}',
+           '--region', 'us-west2', '--platform', 'managed',
+           '--allow-unauthenticated']
+  # [END cloudbuild_python_deploy_yaml]
+
+# Store images in Google Artifact Registry
+images:
+  - us-west2-docker.pkg.dev/${PROJECT_ID}/jobs-tracker-docker-repo/jobs-tracker-image:${SHORT_SHA}
+# [END cloudbuild_python_yaml]
+
+options:
+  logging: CLOUD_LOGGING_ONLY
